@@ -1,0 +1,33 @@
+{
+  "name": "@ngx-meta-tags/core",
+  "version": "0.1.0",
+  "description": "Angular module for adding HTML meta tags",
+  "private": false,
+  "author": "Hans Kerkhof",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanskerkhof/ngx-meta-tags"
+  },
+  "bugs": {
+    "url": "https://github.com/hanskerkhof/ngx-meta-tags/issues"
+  },
+  "homepage": "https://hanskerkhof.github.io/ngx-meta-tags/",
+  "keywords": [
+    "angular",
+    "typescript",
+    "meta",
+    "universal",
+    "seo",
+    "open-graph",
+    "aot",
+    "server-side-rendering"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
