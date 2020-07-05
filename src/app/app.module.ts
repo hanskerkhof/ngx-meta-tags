@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { NgxMetaTagsModule } from '../../projects/ngx-meta-tags/src/lib/ngx-meta-tags.module';
 import { DemoServiceComponent } from './components/demo-service/demo-service.component';
 import { environment } from '../environments/environment';
+import { DemoHomeComponent } from './components/demo-home/demo-home.component';
 
 @NgModule({
-  declarations: [AppComponent, DemoServiceComponent],
+  declarations: [AppComponent, DemoHomeComponent, DemoServiceComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
@@ -15,7 +16,6 @@ import { environment } from '../environments/environment';
       {
         title: 'Ngx-meta tags',
         description: 'Angular module for adding HTML meta tags',
-        author: 'Hans Kerkhof',
         image: `${environment.appUrl}/assets/meta-tags-icon.png`,
         url: `${environment.appUrl}/`
       }

@@ -1,4 +1,4 @@
-import { Inject, Injectable, Optional } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NgxMetaTagsConfig } from './ngx-meta-tags.module';
 
@@ -93,16 +93,13 @@ export class NgxMetaTagsService {
 
   private setTags(tags: MetaTag[]): void {
     tags.forEach(siteTag => {
-      // if (siteTag.value !== '') {
-      //   console.log(siteTag);
       if (siteTag.isFacebook) {
         this.metaService.updateTag({property: siteTag.name, content: siteTag.value});
+        // console.log(this.metaService.getTag(`property='${siteTag.name}'`));
       } else {
         this.metaService.updateTag({name: siteTag.name, content: siteTag.value});
+        // console.log(this.metaService.getTag(`name='${siteTag.name}'`));
       }
-      // } else {
-      //   console.log('no value', siteTag);
-      // }
     });
   }
 }
