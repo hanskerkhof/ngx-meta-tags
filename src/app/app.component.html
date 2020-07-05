@@ -1,11 +1,20 @@
-<img [src]="environment.appUrl + 'assets/meta-tags-icon.png'" style="width: 64px;">
-<h1>ngx-meta-tags</h1>
+<header>
+  <div>
+    <img [src]="environment.appUrl + 'assets/meta-tags-icon.png'" style="width: 64px;">
+  </div>
+  <div>
+    <h1>ngx-meta-tags</h1>
+  </div>
+</header>
+
 <button type="button" [routerLink]="['']" (click)="setMeta()">Home</button>
 <button type="button" [routerLink]="['service']">Set via service</button>
 
 <router-outlet></router-outlet>
 <br>
+<lib-ngx-meta-tags></lib-ngx-meta-tags>
 <br>
 <br>
-<br>
-Logo by <a href="https://thenounproject.com/artworkbean" target="_blank">artworkbean</a> licensed under CC BY 3.0
+<footer>
+  ngx-meta-tags - <a href="https://github.com/hanskerkhof/ngx-meta-tags" target="_blank">Github</a> - Logo by <a href="https://thenounproject.com/artworkbean" target="_blank">artworkbean</a> licensed under CC BY 3.0
+</footer>

@@ -21,6 +21,7 @@ export class DemoServiceComponent implements OnInit {
       author: 'Hans Kerkhof',
       image: `${environment.appUrl}/assets/meta-tags-service-icon.png`,
       url: `${environment.appUrl}/service/`,
+      type: 'article'
     };
     this.ngxMetaTagsService.setMetaFromConfig(this.metaTagConfig);
   }

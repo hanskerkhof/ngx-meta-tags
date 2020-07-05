@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NgxMetaTagsConfig } from './ngx-meta-tags.module';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 export class MetaTag {
   name: string;
@@ -18,6 +19,9 @@ export class MetaTag {
   providedIn: 'root'
 })
 export class NgxMetaTagsService {
+  private metaTagsSubject: BehaviorSubject<any>;
+  public metaTags$: Observable<any>;
+
   private titlePrimaryMeta = 'title';
   private descriptionPrimaryMeta = 'description';
   private authorPrimaryMeta = 'author';
@@ -38,6 +42,8 @@ export class NgxMetaTagsService {
               private titleService: Title,
               private metaService: Meta,
   ) {
+    this.metaTagsSubject = new BehaviorSubject<any>([]);
+    this.metaTags$ = this.metaTagsSubject.asObservable();
   }
 
   public setTitle(title): void {
@@ -58,7 +64,7 @@ export class NgxMetaTagsService {
     );
     this.setSocialMediaTags(
       `${this.config.url}`,
-      'website',
+      '' + this.config.type,
       '' + this.config.title,
       '' + this.config.description,
       '' + this.config.image
@@ -94,7 +100,7 @@ export class NgxMetaTagsService {
   private setTags(tags: MetaTag[]): void {
     tags.forEach(siteTag => {
       if (siteTag.isFacebook) {
-        if(siteTag.value){
+        if (siteTag.value) {
           this.metaService.updateTag({property: siteTag.name, content: siteTag.value});
           // console.log(this.metaService.getTag(`property='${siteTag.name}'`));
         } else {
@@ -102,7 +108,7 @@ export class NgxMetaTagsService {
           this.metaService.removeTag(`property='${siteTag.name}'`);
         }
       } else {
-        if(siteTag.value) {
+        if (siteTag.value) {
           this.metaService.updateTag({name: siteTag.name, content: siteTag.value});
           // console.log(this.metaService.getTag(`name='${siteTag.name}'`));
         } else {
@@ -111,5 +117,10 @@ export class NgxMetaTagsService {
         }
       }
     });
+
+    const result1 = this.metaService.getTags('name').map(({ outerHTML }) => outerHTML);
+    const result2 = this.metaService.getTags('property').map(({ outerHTML }) => outerHTML);
+    const tagsHtml = [...result1,  ...result2];
+    this.metaTagsSubject.next(tagsHtml);
   }
 }

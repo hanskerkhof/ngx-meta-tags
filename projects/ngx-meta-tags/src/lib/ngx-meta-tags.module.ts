@@ -1,6 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { NgxMetaTagsComponent } from './ngx-meta-tags.component';
 import { NgxMetaTagsService } from './ngx-meta-tags.service';
+import { CommonModule } from '@angular/common';
 
 export interface NgxMetaTagsConfig {
   title?: string;
@@ -14,7 +15,7 @@ export interface NgxMetaTagsConfig {
 
 @NgModule({
   declarations: [NgxMetaTagsComponent],
-  imports: [],
+  imports: [CommonModule],
   exports: [NgxMetaTagsComponent]
 })
 export class NgxMetaTagsModule {

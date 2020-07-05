@@ -1,3 +1,17 @@
 button {
   margin-right: 5px;
 }
+
+header {
+  display: flex;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: aliceblue;
+  width: 100%;
+  text-align: center;
+}
