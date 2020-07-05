@@ -8,6 +8,8 @@ export interface NgxMetaTagsConfig {
   author?: string;
   url?: string;
   image?: string;
+  // https://ogp.me/#types
+  type?: 'website' | 'article' | string;
 }
 
 @NgModule({

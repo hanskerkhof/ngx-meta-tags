@@ -14,18 +14,11 @@ import { DemoHomeComponent } from './components/demo-home/demo-home.component';
     AppRoutingModule,
     NgxMetaTagsModule.forRoot(
       {
-        title: 'Ngx-meta tags',
+        title: 'Ngx-meta-tags',
         description: 'Angular module for adding HTML meta tags',
         image: `${environment.appUrl}/assets/meta-tags-icon.png`,
         url: `${environment.appUrl}/`
       }
-      // {
-      //   author: 'ngx-meta-tags',
-      //   title: 'ngx-meta-tags',
-      //   description: 'ngx-meta-tags',
-      //   url: '',
-      //   image: ''
-      // }
     ),
   ],
   providers: [],

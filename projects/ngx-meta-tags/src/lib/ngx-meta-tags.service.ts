@@ -94,11 +94,21 @@ export class NgxMetaTagsService {
   private setTags(tags: MetaTag[]): void {
     tags.forEach(siteTag => {
       if (siteTag.isFacebook) {
-        this.metaService.updateTag({property: siteTag.name, content: siteTag.value});
-        // console.log(this.metaService.getTag(`property='${siteTag.name}'`));
+        if(siteTag.value){
+          this.metaService.updateTag({property: siteTag.name, content: siteTag.value});
+          // console.log(this.metaService.getTag(`property='${siteTag.name}'`));
+        } else {
+          // console.log('remove tag', `property='${siteTag.name}'`);
+          this.metaService.removeTag(`property='${siteTag.name}'`);
+        }
       } else {
-        this.metaService.updateTag({name: siteTag.name, content: siteTag.value});
-        // console.log(this.metaService.getTag(`name='${siteTag.name}'`));
+        if(siteTag.value) {
+          this.metaService.updateTag({name: siteTag.name, content: siteTag.value});
+          // console.log(this.metaService.getTag(`name='${siteTag.name}'`));
+        } else {
+          // console.log('remove tag', `name='${siteTag.name}'`);
+          this.metaService.removeTag(`name='${siteTag.name}'`);
+        }
       }
     });
   }

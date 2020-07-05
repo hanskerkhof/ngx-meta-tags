@@ -1,6 +1,6 @@
 {
   "name": "ngx-meta-tags",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Angular module for adding HTML meta tags",
   "private": false,
   "author": "Hans Kerkhof",
@@ -24,8 +24,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^10.0.2",
-    "@angular/core": "^10.0.2"
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
