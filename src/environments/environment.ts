@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  appUrl: 'https://hanskerkhof.github.io/ngx-meta-tags'
+  appUrl: '/'
 };
 
 /*

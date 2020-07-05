@@ -8,7 +8,8 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngx-meta-tags-demo';
+  public title = 'ngx-meta-tags-demo';
+  public environment = environment;
 
   constructor(private ngxMetaTagsService: NgxMetaTagsService) {
   }
