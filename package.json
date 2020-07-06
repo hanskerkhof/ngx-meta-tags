@@ -12,7 +12,8 @@
     "serve:ssr": "node dist/ngx-meta-tags-demo/server/main.js",
     "build:ssr": "ng build --prod && ng run ngx-meta-tags-demo:server:production",
     "prerender": "ng run ngx-meta-tags-demo:prerender",
-    "deploy-gh-pages": "ng run ngx-meta-tags-demo:prerender && ng deploy --no-build --no-silent --name='CI/CD' --email='info@netmatic.nl' --message='deploy-gh-pages [skip ci]\n\nSkip this commit on CircleCi'"
+    "deploy-gh-pages-prerender": "ng run ngx-meta-tags-demo:prerender && ng deploy --no-build --no-silent --name='CI/CD' --email='info@netmatic.nl' --message='deploy-gh-pages [skip ci]\n\nSkip this commit on CircleCi'",
+    "deploy-gh-pages": "ng build --prod --base-href=https://hanskerkhof.github.io/ngx-meta-tags/ && ng deploy --no-build --no-silent --name='CI/CD' --email='info@netmatic.nl' --message='deploy-gh-pages [skip ci]\n\nSkip this commit on CircleCi'"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@angular/router": "~10.0.0",
     "@nguniversal/express-engine": "^10.0.1",
     "express": "^4.15.2",
+    "milligram-sass": "^1.4.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

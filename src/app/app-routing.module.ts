@@ -21,7 +21,8 @@ const routes: Routes = [
     data: {
       metaTags: {
         title: 'Route',
-        description: 'Description set in route data.metaTags'
+        description: 'Description set in route data.metaTags',
+        author: 'Hans Kerkhof'
       }
     }
   }

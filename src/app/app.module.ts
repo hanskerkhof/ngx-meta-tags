@@ -6,9 +6,10 @@ import { NgxMetaTagsModule } from '../../projects/ngx-meta-tags/src/lib/ngx-meta
 import { DemoServiceComponent } from './components/demo-service/demo-service.component';
 import { environment } from '../environments/environment';
 import { DemoHomeComponent } from './components/demo-home/demo-home.component';
+import { DemoRouteComponent } from './components/demo-route/demo-route.component';
 
 @NgModule({
-  declarations: [AppComponent, DemoHomeComponent, DemoServiceComponent],
+  declarations: [AppComponent, DemoHomeComponent, DemoServiceComponent, DemoRouteComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,

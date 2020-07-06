@@ -9,7 +9,6 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
   public title = 'ngx-meta-tags-demo';
-  public environment = environment;
 
   constructor(private ngxMetaTagsService: NgxMetaTagsService) {
   }

@@ -1,15 +1,17 @@
 <header>
   <div>
-    <img [src]="environment.appUrl + 'assets/meta-tags-icon.png'" style="width: 64px;">
+    <img src="assets/meta-tags-icon.png" style="width: 64px;">
   </div>
   <div>
     <h1>ngx-meta-tags</h1>
   </div>
 </header>
 
-<button type="button" [routerLink]="['']" (click)="setMeta()">Home</button>
-<button type="button" [routerLink]="['service']">Set via service</button>
-<button type="button" [routerLink]="['route']">Set via route</button>
+<button type="button" routerLinkActive="button-outline" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['']"
+        (click)="setMeta()">Home
+</button>
+<button type="button" routerLinkActive="button-outline" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['service']">Set via service</button>
+<button type="button" routerLinkActive="button-outline" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['route']">Set via route</button>
 
 <router-outlet></router-outlet>
 <br>
@@ -17,5 +19,6 @@
 <br>
 <br>
 <footer>
-  ngx-meta-tags - <a href="https://github.com/hanskerkhof/ngx-meta-tags" target="_blank">Github</a> - Logo by <a href="https://thenounproject.com/artworkbean" target="_blank">artworkbean</a> licensed under CC BY 3.0
+  ngx-meta-tags - <a href="https://github.com/hanskerkhof/ngx-meta-tags" target="_blank">Github</a> - Logo by <a
+  href="https://thenounproject.com/artworkbean" target="_blank">artworkbean</a> licensed under CC BY 3.0
 </footer>
