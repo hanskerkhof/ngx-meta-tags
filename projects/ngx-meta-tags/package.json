@@ -1,6 +1,6 @@
 {
   "name": "ngx-meta-tags",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Angular module for adding HTML meta tags",
   "private": false,
   "author": "Hans Kerkhof",
