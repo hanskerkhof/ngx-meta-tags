@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxMetaTagsService } from '../../../../projects/ngx-meta-tags/src/lib/ngx-meta-tags.service';
 import { environment } from '../../../environments/environment';
-import { NgxMetaTagsConfig } from 'ngx-meta-tags';
+import { NgxMetaTagsConfig } from '../../../../projects/ngx-meta-tags/src/lib/ngx-meta-tags.module';
+import { NgxMetaTagsService } from '../../../../projects/ngx-meta-tags/src/lib/ngx-meta-tags.service';
 
 @Component({
   selector: 'app-demo-service',
