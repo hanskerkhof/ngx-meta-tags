@@ -27,7 +27,7 @@
     "@angular/platform-server": "~11.2.9",
     "@angular/router": "~11.2.9",
     "@nguniversal/express-engine": "^11.2.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "milligram-sass": "^1.4.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
